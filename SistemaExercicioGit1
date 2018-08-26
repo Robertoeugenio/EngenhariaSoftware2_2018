@@ -60,111 +60,218 @@ $ ls
 classes/
 
 rober@Eugenio MINGW64 ~/desktop/EclipseArquivos/SistemaExercicioGit1/build (master)
-$ add gitignore
-bash: add: command not found
-
+$ add .gitignore
 
 6) Adicione todos os arquivos na área de stage, com um só comando 
-rober@Eugenio MINGW64 ~/desktop/EclipseArquivos/SistemaExercicioGit1 (master)
-$ git commit -m "Versão Inicial do meu Sistema"
-On branch master
-
-Initial commit
-
-Untracked files:
-        .classpath
-        .gitinore.swp
-        .project
-        .settings/
-        WebContent/
-
-nothing added to commit but untracked files present
-
+rober@Eugenio MINGW64 ~/desktop/eclipseArquivos/sistemaExercicioGit1 (master)
+$ git add .
 7) Execute novamente o comando do passo 4, para você visualizar quais são os novos arquivos que foram incluídogis na área de stage 
 
+
+rober@Eugenio MINGW64 ~/desktop/eclipseArquivos/sistemaExercicioGit1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .classpath
+        new file:   .gitinore.swp
+        new file:   .project
+        new file:   .settings/.jsdtscope
+        new file:   .settings/org.eclipse.jdt.core.prefs
+        new file:   .settings/org.eclipse.wst.common.component
+        new file:   .settings/org.eclipse.wst.common.project.facet.core.xml
+        new file:   .settings/org.eclipse.wst.jsdt.ui.superType.container
+        new file:   .settings/org.eclipse.wst.jsdt.ui.superType.name
+        new file:   WebContent/META-INF/MANIFEST.MF
+        new file:   build/classes/Cliente.class
+        new file:   src/Cliente.java
+
+
+
+
+
+
 8) Grave os arquivos no repositório (parâmetro –m), com a mensagem “Versão Inicial do Sistema”
+ rober@Eugenio MINGW64 ~/desktop/eclipseArquivos/sistemaExercicioGit1 (master)
+$ git commit -m "Versão Inicial do Sistema"
+[master (root-commit) ca96496] Versão Inicial do Sistema
+ 12 files changed, 106 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .gitinore.swp
+ create mode 100644 .project
+ create mode 100644 .settings/.jsdtscope
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 .settings/org.eclipse.wst.common.component
+ create mode 100644 .settings/org.eclipse.wst.common.project.facet.core.xml
+ create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.container
+ create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.name
+ create mode 100644 WebContent/META-INF/MANIFEST.MF
+ create mode 100644 build/classes/Cliente.class
+ create mode 100644 src/Cliente.java
+
+
 
  9) Execute o comando para visualizar as informações básicas sobre o commit (data, autor, id do commit, mensagem)
+rober@Eugenio MINGW64 ~/desktop/eclipseArquivos/sistemaExercicioGit1 (master)
+$ git log
+commit ca96496b94219f857474358cf9372e19d1d2a35a (HEAD -> master)
+Author: robertoeugenio1978@gmail.com <robertoeugenio>
+Date:   Sat Aug 25 16:30:22 2018 -0300
+
+    Versão Inicial do Sistema
+
 
 
  10) Execute o comando para visualizar as informações básicas do commit em uma única linha 
 
+rober@Eugenio MINGW64 ~/desktop/eclipseArquivos/sistemaExercicioGit1 (master)
+$ git log  --oneline
+ca96496 (HEAD -> master) Versão Inicial do Sistema
+
+
+
 11) Execute o comando para visualizar o conteúdo que foi incluído neste commit 
+rober@Eugenio MINGW64 ~/desktop/eclipseArquivos/sistemaExercicioGit1 (master)
+$ git log --stat
+commit ca96496b94219f857474358cf9372e19d1d2a35a (HEAD -> master)
+Author: robertoeugenio1978@gmail.com <robertoeugenio>
+Date:   Sat Aug 25 16:30:22 2018 -0300
+
+    Versão Inicial do Sistema
+
+ .classpath                                         |  17 +++++++++++
+ .gitinore.swp                                      | Bin 0 -> 12288 bytes
+ .project                                           |  31 +++++++++++++++++++++
+ .settings/.jsdtscope                               |  12 ++++++++
+ .settings/org.eclipse.jdt.core.prefs               |   7 +++++
+ .settings/org.eclipse.wst.common.component         |   8 ++++++
+ .../org.eclipse.wst.common.project.facet.core.xml  |  10 +++++++
+ .../org.eclipse.wst.jsdt.ui.superType.container    |   1 +
+ .settings/org.eclipse.wst.jsdt.ui.superType.name   |   1 +
+ WebContent/META-INF/MANIFEST.MF                    |   3 ++
+ build/classes/Cliente.class                        | Bin 0 -> 655 bytes
+ src/Cliente.java                                   |  16 +++++++++++
+ 12 files changed, 106 insertions(+)
 
 12) Usando o eclipse, adicione uma nova classe no projeto, chamanda Cliente.java
+import java.util.Scanner;
+
+public class Cliente {
+
+	private String nome;
+	private int id;
+	private Double salario;
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		
+		sc.close();
+	}
+
+}
 
 
  13) Execute novamente o comando do passo 4 para visualizar o que ainda não foi incluído na área de stage 
+rober@Eugenio MINGW64 ~/desktop/eclipseArquivos/sistemaExercicioGit1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
 
 
 14) Execute novamente o comando do passo 6, visando adicionar a classe Cliente na área de stage. 15)
+rober@Eugenio MINGW64 ~/desktop/eclipseArquivos/sistemaExercicioGit1 (master)
+$ git add .
+
+
 
  Altere a classe Cliente, incluindo o campo de String nome 
-
+ Ok 
 16) Execute novamente o passo 8, colocando a mensagem “Inclusão da classe Cliente” 
+Git commit –m “ Inclusão da classe Cliente”
 
 17) Execute o comando para verificar as diferenças entre o último commit e o conteúdo que não está ainda na área de stage (é esperado que apareça o private String nome) 
+Git add .
+Git diff --staged
 18) Execute o comando para gravar os arquivos no repositório, mas executando com o parâmetro –am, que gravará as modificações. Coloque a mensagem “Adição do campo nome” 
-
+Git commit  -am “Adição do campo nome”
 19) Execute novamente o comando do passo 17
-
+Git diff  -- staged 
  20) Altere a classe Cliente, incluindo o campo de Integer id
-
+Git commit  –am  “Inclusao do campo id”
  21) Adicione a classe Cliente na área de stage 
-
+Git add Cliente.java 
 22) Execute novamtne o comando do passo 17, mas agora é esperado que não apareça nada. 
-
+Git diff --staged 
 23) Execute o comando para verificar as diferenças entre o último commit e o conteúdo que está na área de stage (é esperado que apareça o campo id)
-
+Git log 
  24) Execute o comando para gravar as alterações, com a mensagem “inclusão do campo id” 
-
+Git commit –m “ Inclusão do campo id ”
 25) Execute novamente o comando do passo 10 
-
+Git log --oneline
 26) Com os identificadores de cada commit buscados no comando do passo 25, execute o comando para verificar as diferenças entre os dois últimos commits. 
-
+Git diff –staged
+Git diff  e8f8658	
+Git diff c256481
 27) Execute o comando para verificar as diferenças entre o último e o antepenúltimo commit  
-
+Git log –n 2 				
 28) No eclipse, adicione o pacote model.domain 
+Ok 
 
 29) Execute o comando para mover a classe Cliente para dentro do pacote model.domain
-
+Move Cliente.java model/domain 
  30) Efetue a gravação do arquivo, com a mensagem “Movendo a classe Cliente para o pacote model.domain.Cliente”
+Git commit –am “Movendo a classe Cleinte para o pacote model.domain.Cliente”
 
- 31) Atualize o Eclipse com o comando F5, e verá que o git moveu o arquivo de lugar
-
+ 31) Atualize o Eclipse com o comando F5, e verá que o git moveu o arquivo de luga
+r
+ok
  32) Execute o comando para visualizar apenas os dois últimos commits, com o conteúdo alterado. 
-
+Git log –n 2
 33) Altere a classe Cliente, adicionando o campo Double salario
-
+Ok 
  34) Execute o comando para a classe Cliente.java retornar ao conteúdo do último commit, isto é, desfazer as alterações realizadas (inclusão do campo Double salario)
-
+Git rese head Cliente.java 
+Git status 
+Git log 
  35) Repita a inclusão do campo Double salário 
-
+Ok 
 36) Execute o comando para adicionar a classe Cliente.java na área de stage 
-
+Git add  . ou Git add  Cliente.java 
 37) Execute o comando para retirar a classe Cliente.java da área de stage (repare que neste caso, a classe permanecerá com o campo salario, só que esta alteração foi retirada da área de stage – execute o comando git status para constatar) 
+Git reset Cliente.java 
+Git status 
 
 38) Repita o comando do passo 36 
+Git add  . ou Git add  Cliente.java 
 
 39) Grave a alteração com a mensagem “Inclusao do campo salario” 
-
+Git commit –am “Inclusão do campo salario”
 40) Execute o comando para desfazer as alterações deste commit 
-
+Git reset Cliente.java 
 41) Execute o comando para verificar o histórico dos commits em uma linha
-
+history
  42) Adicione a classe Conta.java no mesmo diretório da classe Cliente.java
-
- 43) Inclua a classe Conta.java na área de stage, e depois grave a inclusão com a mensagem “inclusao da classe connta” 
-
+Git commit –am “Inclusão da calsse conta ”
+ 43) Inclua a classe Conta.java na área de stage, e depois grave a inclusão com a mensagem “inclusao da classe conta” 
+Git add . 
+Git commit –am “Iinclusão da classe conta”
 44) Execute o comando para remover a classe conta
-
+Git rm Conta.java 
  45) Grave a alteração com a mensagem “Remoção da classe Conta” 
-
+Git commit –am “Remoção da classe Conta”
 46) Crie um repositório na sua conta do github chamado “SistemaExercicioGit1”
+Git remote add origin https: //github.com/Robertoeugenio/SistemaExercicioGit1
  47) Execute o comando no gitbash para apontar para este repositório remoto 
-
+Git pull origin SistemaExerciciogit1
 48) Execute o comando para subir o seu repositório local para o seu repositório remoto no github
+Git push origin master
 
  49) Verifique os seus arquivos e seu histórico de commits no github.
-
+Ok 	
   50) Faça um clone do repositório no github para outro diretório do seu computador.
+
