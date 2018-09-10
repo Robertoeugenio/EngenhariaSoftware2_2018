@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: SistemaExtensaoSTS
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: rober
+Implementation-Vendor-Id: br.edu.iftm.extensao
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/SistemaExtensaoSTS
+Created-By: Maven Integration for Eclipse
+
